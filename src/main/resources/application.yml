@@ -7,6 +7,12 @@ spring:
   cloud:
     config:
       server:
+        native:
+          search-locations: file:///${user.home}/Project/BackEnd/msa-ecoomerce/native-config
         git:
-          uri: file:///Users/huiseongshin/Project/BackEnd/msa-ecoomerce/git-local-repo
+#          uri: file:///Users/huiseongshin/Project/BackEnd/msa-ecoomerce/git-local-repo
+          # remote repo & ptivate repo일경우 username, password 등록해야함
+          uri: https://github.com/legend-e-commerce/spring-cloud-config
           default-label: master
+  profiles:
+    active: native
