@@ -30,4 +30,8 @@ management:
         include: health, busrefresh
 
 encrypt:
-  key: asdlkjasdlkjasdlkjasdlkjasdlkj1234567890
+  key-store:
+    location: file://${user.home}/Project/BackEnd/msa-ecoomerce/keystore/apiEncryptionKey.jks
+    password: test1234
+    alias: apiEncryptionKey
+#  key: asdlkjasdlkjasdlkjasdlkjasdlkj1234567890
